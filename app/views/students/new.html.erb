@@ -1,0 +1,14 @@
+<%= form_tag students_path do %>
+  <%= label_tag(:full_name, "Full name") %>
+  <%= text_field_tag(:full_name, nil, placeholder: @placeholder_name) %>
+
+  <%= label_tag(:fave_restaurant, "Favorite restaurant and why it's Mezzos") %>
+  <%= text_field_tag(:fave_restaurant, nil, placeholder: @placeholder_restaurant) %>
+
+  <%= label_tag(:frost_mage_level, "Level of your frost mage?") %>
+  <%= text_field_tag(:frost_mage_level, nil, placeholder: @placeholder_level) %>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <%= submit_tag("Submit") %>
+<% end %>
